@@ -9,11 +9,11 @@ import {
     return (
       <section
         id="skills"
-        className="flex flex-col items-center justify-center gap-3 h-full relative"
+        className="flex flex-col items-center justify-center gap-3 h-full relative max-md:px-6"
       >
         <SkillText />
   
-        <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+        <div className="flex flex-row justify-center flex-wrap mt-4 gap-10 items-center ">
           {Skill_data.map((image, index) => (
             <SkillDataProvider
               key={index}
