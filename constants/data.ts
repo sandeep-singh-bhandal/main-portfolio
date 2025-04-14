@@ -54,11 +54,6 @@ export const Skill_data = [
 
 export const Socials = [
   {
-    name: "Instagram",
-    src: "/instagram.svg",
-    link: "https://www.instagram.com/_sunny_310/",
-  },
-  {
     name: "LinkedIn",
     src: "/linkedin.svg",
     link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
@@ -67,6 +62,11 @@ export const Socials = [
     name: "Github",
     src: "/github.svg",
     link: "https://github.com/sandeep-singh-bhandal"
+  },
+  {
+    name: "Instagram",
+    src: "/instagram.svg",
+    link: "https://www.instagram.com/_sunny_310/",
   },
 ];
 

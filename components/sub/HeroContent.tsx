@@ -19,15 +19,14 @@ const HeroContent = () => {
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
           variants={slideInFromTop}
-          className="Welcome-box py-[8px] px-5 border-[#7042f88b] opacity-[0.9]"
+          className="px-1"
         >
-          <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
-          <h1 className="Welcome-text text-lg">Web Developer</h1>
+          <h1 className="Welcome-text text-3xl h-[40px]">Hi, I'm Sandeep Singh</h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl max-md:text-4xl font-bold text-white max-w-[600px] w-auto h-auto "
+          className="flex flex-col gap-6 text-6xl max-md:text-4xl font-bold text-white max-w-[600px] w-auto h-auto "
         >
           <span>
             Providing{" "}
@@ -48,9 +47,9 @@ const HeroContent = () => {
         </motion.p>
         <motion.a
           variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer max-md:mx-auto rounded-lg w-[200px]"
+          className="py-2 button-primary text-center text-white cursor-pointer max-md:mx-auto rounded-lg w-fit px-16"
         >
-          Learn More
+          Learn More About Me!
         </motion.a>
       </div>
       <motion.div
