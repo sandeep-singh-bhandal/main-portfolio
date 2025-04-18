@@ -6,30 +6,35 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
+import { SkillSectionData } from "@/constants/data";
+import { useInView } from "react-intersection-observer";
 
 const SkillText = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div className="w-full h-auto flex flex-col items-center justify-center ">
+    <motion.div
+      initial="hidden"
+      animate={inView?"visible":"hidden"}
+      ref={ref}
+
+      className="w-full h-auto flex flex-col items-center justify-center gap-3"
+    >
       <motion.div
-        variants={slideInFromTop}
-        className="py-[8px] px-[7px] opacity-[0.9] text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500
+        variants={slideInFromTop(0.5)}
+        className="py-[8px] px-[7px] opacity-[0.9] text-4xl md:text-5xl  text-transparent bg-clip-text bg-gradient-to-r from-purple-500
          to-cyan-500"
       >
-        My Skills
+        {SkillSectionData.title}
       </motion.div>
       <motion.div
-        variants={slideInFromLeft(0.5)}
-        className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]  max-md:text-[25px]"
+        variants={slideInFromTop(0.6)}
+        className="text-2xl md:text-3xl text-white font-mediumtext-center mb-8 text-center"
       >
-        Making apps with modern technologies
+        {SkillSectionData.subtitle1}
       </motion.div>
-      <motion.div
-        variants={slideInFromRight(0.5)}
-        className="cursive text-[20px] text-gray-200 mb-8 text-center"
-      >
-        Never miss a task, deadline or idea
-      </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

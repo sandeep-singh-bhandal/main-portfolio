@@ -1,222 +1,161 @@
-import { link } from "fs";
 
-export const Skill_data = [
+export const NavbarData = [
   {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Framer Motion",
-    Image: "/framer.png",
-    width: 80,
-    height: 80,
-  },
-
-];
-
-export const Socials = [
-  {
-    name: "LinkedIn",
-    src: "/linkedin.svg",
-    link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
-  },
-  {
-    name: "Github",
-    src: "/github.svg",
-    link: "https://github.com/sandeep-singh-bhandal"
-  },
-  {
-    name: "Instagram",
-    src: "/instagram.svg",
-    link: "https://www.instagram.com/_sunny_310/",
+    title: "Portfolio",
+    navItems: [
+      { name: "Home", link: "/" },
+      { name: "About", link: "/about" },
+      { name: "Projects", link: "/projects" },
+    ],
+    socials: [
+      {
+        name: "LinkedIn",
+        src: "/linkedin.svg",
+        link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
+      },
+      {
+        name: "Github",
+        src: "/github.svg",
+        link: "https://github.com/sandeep-singh-bhandal",
+      },
+    ],
   },
 ];
 
-export const Frontend_skill = [
-  {
-    skill_name: "Html 5",
-    Image: "/html.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Css",
-    Image: "/css.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Java Script",
-    Image: "/js.png",
-    width: 65,
-    height: 65,
-  },
-  {
-    skill_name: "Tailwind Css",
-    Image: "/tailwind.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Material UI",
-    Image: "/mui.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React",
-    Image: "/react.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Redux",
-    Image: "/redux.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: "/reactquery.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Type Script",
-    Image: "/ts.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Next js 13",
-    Image: "/next.png",
-    width: 80,
-    height: 80,
-  },
-];
+export const HeroSectionData = {
+  greeting: "Hi, I'm Sandeep Singh",
+  description:
+    "I'm a passionate frontend developer with a keen interest in creating dynamic and responsive web applications. I have a strong foundation in HTML, CSS, JavaScript, and React, and I am always eager to learn new technologies and improve my skills. My goal is to build user-friendly interfaces that provide an exceptional user experience.",
+  buttonTitle: "Download Resume",
+};
 
-export const Backend_skill = [
-  {
-    skill_name: "Node js",
-    Image: "/node-js.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Express js",
-    Image: "/express.png",
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "Mongo db",
-    Image: "/mongodb.png",
-    width: 40,
-    height: 40,
-  },
-  {
-    skill_name: "Fire base",
-    Image: "/Firebase.png",
-    width: 55,
-    height: 55,
-  },
-  {
-    skill_name: "Postger SQL",
-    Image: "/postger.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "My SQL",
-    Image: "/mysql.png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Prisma",
-    Image: "/prisma.webp",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Graphql",
-    Image: "/graphql.png",
-    width: 80,
-    height: 80,
-  },
-];
+export const SkillSectionData = {
+  title: "My Skills",
+  subtitle1: "Making apps with modern technologies",
+  subtitle2: "Never miss a task, deadline or idea",
+  Skill_data: [
+    {
+      skill_name: "Html 5",
+      Image: "/html.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "Css",
+      Image: "/css.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "Java Script",
+      Image: "/js.png",
+      width: 65,
+      height: 65,
+    },
+    {
+      skill_name: "Tailwind Css",
+      Image: "/tailwind.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "React",
+      Image: "/react.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "Type Script",
+      Image: "/ts.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "Next js 13",
+      Image: "/next.png",
+      width: 80,
+      height: 80,
+    },
+    {
+      skill_name: "Framer Motion",
+      Image: "/framer.png",
+      width: 80,
+      height: 80,
+    },
+  ],
+};
 
-export const Full_stack = [
-  {
-    skill_name: "React Native",
-    Image: "/ReactNative .png",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Tauri",
-    Image: "/tauri.svg",
-    width: 70,
-    height: 70,
-  },
-  {
-    skill_name: "Docker",
-    Image: "/docker.webp",
-    width: 70,
-    height: 70,
-  },
+export const ProjectsData = {
+  title: "My Projects",
+  projects: [
+    {
+      src: "/admin-dashboard.png",
+      title: "Admin Dashboard",
+      description:
+        "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
+      link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
+    },
+    {
+      src: "/loves-cuisine-yummy.png",
+      title: "Food Catering Website",
+      description:
+        "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
+      link: "https://www.lovescuisine.com",
+    },
+    {
+      src: "/modern-landing-page.png",
+      title: "Modern Landing Page",
+      description:
+        "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
+      link: "https://modern-landing-page-pied.vercel.app/",
+    },
+  ],
+};
 
+export const FooterData = [
   {
-    skill_name: "Figma",
-    Image: "/figma.png",
-    width: 50,
-    height: 50,
+    title: "Professional Socials",
+    socials: [
+      {
+        logo: "/linkedin.svg",
+        name: "LinkedIn",
+        link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
+      },
+      {
+        logo: "/github.svg",
+        name: "Github",
+        link: "https://github.com/sandeep-singh-bhandal",
+      },
+    ],
   },
-];
-
-export const Other_skill = [
   {
-    skill_name: "Go",
-    Image: "/go.png",
-    width: 60,
-    height: 60,
+    title: "Social Media",
+    socials: [
+      {
+        logo: "/instagram.svg",
+        name: "Instagram",
+        link: "https://www.instagram.com/_sunny_310/",
+      },
+      {
+        logo: "/twitter.svg",
+        name: "Twitter",
+        link: "",
+      },
+    ],
+  },
+  {
+    title: "Contact Me",
+    socials: [
+      {
+        logo: "/phone.svg",
+        name: "+91 93997 68186",
+        link: "+91 93997 68186",
+      },
+      {
+        logo: "/gmail.svg",
+        name: "sandeep.310.singh.310gmail.com",
+        link: "sandeep.310.singh.310gmail.com",
+      },
+    ],
   },
 ];

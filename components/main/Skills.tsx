@@ -1,9 +1,10 @@
 import {
-    Skill_data,
+    SkillSectionData,
   } from "@/constants/data";
   import React from "react";
   import SkillDataProvider from "../sub/SkillDataProvider";
   import SkillText from "../sub/SkillText";
+
   
   const Skills = () => {
     return (
@@ -13,13 +14,13 @@ import {
       >
         <SkillText />
   
-        <div className="flex flex-row justify-center flex-wrap mt-4 gap-10 items-center ">
-          {Skill_data.map((image, index) => (
+        <div className="flex flex-row justify-center flex-wrap mt-4 gap-10 items-center px-8 ">
+          {SkillSectionData.Skill_data.map((item, index) => (
             <SkillDataProvider
               key={index}
-              src={image.Image}
-              width={image.width}
-              height={image.height}
+              src={item.Image}
+              width={item.width}
+              height={item.height}
               index={index}
             />
           ))}
@@ -30,7 +31,7 @@ import {
         <div className="w-full h-full absolute">
           <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
             <video
-              className="w-full h-auto"
+              className="w-full h-full"
               preload="false"
               playsInline
               loop

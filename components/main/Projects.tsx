@@ -1,31 +1,33 @@
+"use client";
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
+import { ProjectsData } from "@/constants/data";
+import { motion } from "framer-motion";
+import { slideInFromLeft } from "@/utils/motion";
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-    >
-      <h1 className="text-5xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 
-      max-md:pt-0 max-md:pb-14 py-20">
-        My Projects
-      </h1>
+    <section id="projects" className="mt-16 max-sm:mt-32">
+      <motion.h1
+        initial="hidden"
+        animate="visible"
+        className="text-6xl max-sm:text-5xl text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 
+      max-md:pt-0 max-md:pb-16 py-20"
+        variants={slideInFromLeft(0.7)}
+      >
+        {ProjectsData.title}
+      </motion.h1>
       <div className=" flex flex-wrap justify-center gap-10 px-10">
-        <ProjectCard
-          src="/NextWebsite.png"
-          title="Modern Next.js Portfolio"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <ProjectCard
-          src="/CardImage.png"
-          title="Interactive Website Cards"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
-        <ProjectCard
-          src="/SpaceWebsite.png"
-          title="Space Themed Website"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        />
+        {ProjectsData.projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            src={project.src}
+            title={project.title}
+            description={project.description}
+            demoLink={project.link}
+            animationDelay={index * 0.2}
+          />
+        ))}
       </div>
     </section>
   );
