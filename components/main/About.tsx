@@ -1,86 +1,117 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const About = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#302b63] to-[#24243e] text-white px-6 py-16">
-      <div className="max-w-6xl mx-auto space-y-16">
-        {/* Section Title */}
+    <section className="min-h-screen w-full  text-white px-6 md:px-20 py-32">
+      <div className="max-w-7xl mx-auto space-y-20">
+        {/* Title */}
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Me</span>
+          <h2 className="text-5xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              About Me
+            </span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            Let me take you on a quick tour through my world as a developer, dreamer, and learner.
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Developer. Designer. Dreamer. I love crafting intuitive web
+            experiences.
           </p>
         </div>
 
-        {/* Intro + Skills */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* Bio and Toolbox */}
+        <div className="max-w-1/2 mx-auto">
+          {/* Bio */}
           <div>
             <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
-            <p className="text-gray-300 leading-relaxed">
-              I'm Sandeep Singh, a frontend developer based in India 🇮🇳. I discovered my passion for web development while building my first portfolio project — and haven’t stopped coding since.
-              I love turning designs into functional, smooth, and scalable web apps. My main stack includes <strong className="text-purple-300">React</strong>, <strong className="text-blue-400">TypeScript</strong>, and <strong className="text-cyan-400">Tailwind CSS</strong>.
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Hey! I'm{" "}
+              <strong className="text-purple-300">Sandeep Singh</strong>, a
+              passionate frontend developer based in India 🇮🇳. I thrive at the
+              intersection of design and code, crafting seamless digital
+              experiences using tools like React, Next.js, and Tailwind CSS.
             </p>
-            <p className="text-gray-400 mt-4">
-              I believe in continuous learning and sharing knowledge. Whether it's contributing to open-source, collaborating with peers, or exploring the next cool UI trend — I’m all in.
+            <p className="text-sm text-gray-400">
+              When I’m not coding, I’m probably designing interfaces, reading
+              about emerging tech, or playing indie games that challenge my
+              logic and creativity.
             </p>
-          </div>
-
-          {/* Skills */}
-          <div>
-            <h3 className="text-2xl font-semibold mb-4">Tech Stack</h3>
-            <ul className="grid grid-cols-2 gap-3 text-sm text-gray-300">
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">React</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">Next.js</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">TypeScript</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">Tailwind CSS</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">Framer Motion</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">Firebase</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">Git & GitHub</li>
-              <li className="bg-white/5 border border-white/10 px-4 py-2 rounded-lg">AWS Basics</li>
-            </ul>
           </div>
         </div>
 
-        {/* Experience / Journey */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4">My Journey So Far</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I started as a curious student diving into HTML and CSS, and slowly discovered the power of JavaScript frameworks. Through personal projects, online courses, and real-world practice, I’ve grown into a confident frontend developer. I've built everything from portfolios to mini web apps, focusing on clean design and accessibility.
-          </p>
+        {/* Workflow */}
+        <div>
+          <h3 className="text-2xl font-semibold text-center mb-8">
+            ⚙️ My Workflow
+          </h3>
+          <div className="grid md:grid-cols-4 gap-6 text-sm text-gray-300">
+            {[
+              [
+                "Research",
+                "Understand the user, the problem, and the platform.",
+              ],
+              ["Design", "Wireframe and prototype using Figma or Pen & Paper."],
+              ["Build", "Turn designs into clean code using React & Tailwind."],
+              ["Iterate", "Test, deploy, collect feedback, and improve."],
+            ].map(([title, desc]) => (
+              <div
+                key={title}
+                className="bg-white/5 border border-white/10 backdrop-blur-md rounded-xl p-6 space-y-4 shadow-lg hover:shadow-purple-500/20 hover:border-purple-400 transition duration-300 transform hover:scale-[1.03] cursor-pointer"
+              >
+                <h4 className="font-semibold text-white mb-2">{title}</h4>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Career Vision */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4">What I Aim For</h3>
-          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            My goal is to become a full-stack developer and eventually lead product UI/UX strategies. I want to work with teams that value creativity, innovation, and user-first thinking.
-            I’m especially interested in building tools and platforms that make people’s lives easier.
-          </p>
-        </div>
-
-        {/* Fun facts */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-4">Just for Fun 🎮</h3>
-          <ul className="text-gray-300 space-y-2">
-            <li>🎧 I code best with lofi beats or synthwave in the background.</li>
-            <li>📚 I enjoy reading tech blogs and self-help books.</li>
-            <li>🕹️ I’m into strategy games and indie game design.</li>
-            <li>☕ I’m a firm believer that good code starts with good coffee.</li>
+        {/* Core Values */}
+        <div>
+          <h3 className="text-2xl font-semibold text-center mb-8">
+            💡 Core Values
+          </h3>
+          <ul className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-gray-300 text-center text-sm">
+            {[
+              ["User-First", "Build with empathy for a great user experience."],
+              [
+                "Pixel Perfect",
+                "Every detail matters — from spacing to accessibility.",
+              ],
+              ["Always Learning", "Growth mindset in tech and life."],
+            ].map(([title, desc]) => (
+              <li
+                key={title}
+                className="bg-white/5 border border-white/10 backdrop-blur-md rounded-xl p-6 space-y-4 shadow-lg hover:shadow-purple-500/20 hover:border-purple-400 transition duration-300 transform hover:scale-[1.03] cursor-pointer"
+              >
+                <span className="block text-lg font-bold text-white mb-1">
+                  {title}
+                </span>
+                {desc}
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <a
-            href="#contact"
-            className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-6 py-3 rounded-full font-semibold transition duration-300 shadow-lg"
+        {/* Testimonials Placeholder */}
+        <div className="text-center mt-20">
+          <h3 className="text-2xl font-semibold mb-4">🗣️ What People Say</h3>
+          <p className="text-gray-400 text-sm">
+            <em>
+              “This section will hold feedback from teammates, mentors, or
+              clients.”
+            </em>
+          </p>
+        </div>
+
+        {/* Final CTA */}
+        <div className="text-center mt-16">
+          <Link
+            href="/projects"
+            className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition duration-300"
           >
-            Let’s Work Together
-          </a>
+            See My Projects 🚀
+          </Link>
         </div>
       </div>
     </section>
