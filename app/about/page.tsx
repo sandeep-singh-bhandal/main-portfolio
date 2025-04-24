@@ -1,3 +1,4 @@
+import About from '@/components/main/About'
 import Footer from '@/components/main/Footer'
 import Navbar from '@/components/main/Navbar'
 import React from 'react'
@@ -7,6 +8,7 @@ const page = () => {
     <main className="h-full w-full">
       <div className="flex flex-col gap-20 max-md:gap-10">
         <Navbar />
+        <About />
         <Footer />
       </div>
     </main>
