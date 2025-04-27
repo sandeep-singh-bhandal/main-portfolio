@@ -26,14 +26,14 @@ const About = () => {
           <div>
             <h3 className="text-2xl font-semibold mb-4">Who I Am</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Hey! I'm{" "}
+              Hey! I&apos;m{" "}
               <strong className="text-purple-300">Sandeep Singh</strong>, a
               passionate frontend developer based in India 🇮🇳. I thrive at the
               intersection of design and code, crafting seamless digital
               experiences using tools like React, Next.js, and Tailwind CSS.
             </p>
             <p className="text-sm text-gray-400">
-              When I’m not coding, I’m probably designing interfaces, reading
+              When I&apos;m not coding, I&apos;m probably designing interfaces, reading
               about emerging tech, or playing indie games that challenge my
               logic and creativity.
             </p>

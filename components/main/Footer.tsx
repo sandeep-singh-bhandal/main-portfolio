@@ -1,5 +1,4 @@
 import React from "react";
-import { FaYoutube } from "react-icons/fa";
 import { FooterData } from "@/constants/data";
 import Image from "next/image";
 

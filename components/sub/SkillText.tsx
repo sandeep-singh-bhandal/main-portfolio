@@ -2,8 +2,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  slideInFromLeft,
-  slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
 import { SkillSectionData } from "@/constants/data";
