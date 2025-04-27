@@ -1,74 +1,108 @@
-"use client";
+'use client';
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
-import React, { useState, useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
-// @ts-ignore
-import * as random from "maath/random/dist/maath-random.esm";
+const StarsBackground = () => {
+  const mountRef = useRef<HTMLDivElement>(null);
 
-const StarBackground = (props: any) => {
-  const ref = useRef<any>(null);
-  
-  // Modified initialization with validation
-  const [sphere] = useState(() => {
-    // Generate exactly 5000 points (5000 * 3 components)
-    const positions = random.inSphere(new Float32Array(5000 * 3), { radius: 1.2 });
-    
-    // Validation checks
-    if (positions.length !== 15000) {
-      console.error(`Invalid array length: ${positions.length} (expected 15000)`);
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    if (mountRef.current) {
+      mountRef.current.appendChild(renderer.domElement);
     }
-    
-    const hasNaN = positions.some((v:Number) => Number.isNaN(v));
-    if (hasNaN) {
-      console.error("NaN values detected in positions array!");
+
+    const starsCount = 500;
+    const starsGeometry = new THREE.BufferGeometry();
+    const positions = new Float32Array(starsCount * 3);
+    const speeds = new Float32Array(starsCount); // har star ka apna speed
+
+    for (let i = 0; i < starsCount; i++) {
+      positions[i * 3 + 0] = (Math.random() - 0.5) * 1000; // x
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 1000; // y
+      positions[i * 3 + 2] = -Math.random() * 1000;         // z
+
+      // Random speed: kuch normal (2-4), kuch shooting star fast (10-20)
+      speeds[i] = Math.random() < 0.97 ? (2 + Math.random() * 2) : (10 + Math.random() * 10);
     }
-    
-    console.log('Generated positions:', {
-      length: positions.length,
-      sample: positions.slice(0, 6) // First 2 points (x,y,z,x,y,z)
+
+    starsGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const starsMaterial = new THREE.PointsMaterial({
+      color: 0xffffff,
+      size: 1.5,
+      sizeAttenuation: true,
+      transparent: true,
+      opacity: 0.9,
     });
 
-    return positions;
-  });
+    const stars = new THREE.Points(starsGeometry, starsMaterial);
+    scene.add(stars);
 
-  useFrame((state, delta) => {
-    if (ref.current) { // Added null check
-      ref.current.rotation.x -= delta/10;
-      ref.current.rotation.y -= delta/15;
-    }
-  });
+    camera.position.z = 0;
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      const positions = starsGeometry.attributes.position.array as Float32Array;
+
+      for (let i = 0; i < starsCount; i++) {
+        positions[i * 3 + 2] += 6; // apni speed se move kar
+
+        // Agar star camera ke pass aa gaya, reset karo
+        if (positions[i * 3 + 2] > camera.position.z) {
+          positions[i * 3 + 2] = -1000;
+          positions[i * 3 + 0] = (Math.random() - 0.5) * 1000;
+          positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
+
+          // Shooting stars random create hote rahenge
+          speeds[i] = Math.random() < 0.97 ? (2 + Math.random() * 2) : (10 + Math.random() * 10);
+        }
+      }
+
+      starsGeometry.attributes.position.needsUpdate = true;
+      renderer.render(scene, camera);
+    };
+    animate();
+
+    const handleResize = () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (mountRef.current) {
+        mountRef.current.removeChild(renderer.domElement);
+      }
+    };
+  }, []);
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
-      <Points
-        ref={ref}
-        positions={sphere}
-        stride={3}
-        frustumCulled
-        {...props}
-      >
-        <PointMaterial
-          transparent
-          color="#fff"
-          size={0.002}
-          sizeAttenuation={true}
-          depthWrite={false}
-        />
-      </Points>
-    </group>
+    <div
+      ref={mountRef}
+      style={{
+        position: 'fixed',
+        width: '100%',
+        height: '100%',
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        pointerEvents: 'none',
+      }}
+    />
   );
 };
 
-const StarsCanvas = () => (
-  <div className="w-full h-auto fixed inset-0 z-[20]">
-    <Canvas camera={{ position: [0, 0, 1] }}>
-      <Suspense fallback={null}>
-        <StarBackground />
-      </Suspense>
-      <Preload all />
-    </Canvas>
-  </div>
-);
-
-export default StarsCanvas;
+export default StarsBackground;
