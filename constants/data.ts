@@ -1,3 +1,4 @@
+import { link } from "fs";
 
 export const NavbarData = [
   {
@@ -149,12 +150,12 @@ export const FooterData = [
       {
         logo: "/phone.svg",
         name: "+91 93997 68186",
-        link: "+91 93997 68186",
+        link: "https://wa.me/+919399768186",
       },
       {
         logo: "/gmail.svg",
         name: "sandeep.310.singh.310gmail.com",
-        link: "sandeep.310.singh.310gmail.com",
+        link: "mailto:"
       },
     ],
   },

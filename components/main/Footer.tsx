@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterData } from "@/constants/data";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -24,7 +25,14 @@ const Footer = () => {
                     src={social.logo}
                     alt={social.name}
                   />
-                  <span className="text-[15px] ml-[6px]">{social.name}</span>
+                  <Link
+                    className="text-[15px] ml-[6px]"
+                    href={social.link}
+                    target="_blank"
+                    
+                  >
+                    {social.name}
+                  </Link>
                 </p>
               ))}
             </div>
