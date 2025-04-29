@@ -1,27 +1,23 @@
-import { link } from "fs";
-
-export const NavbarData = [
-  {
-    title: "Portfolio",
-    navItems: [
-      { name: "Home", link: "/" },
-      { name: "About", link: "/about" },
-      { name: "Projects", link: "/projects" },
-    ],
-    socials: [
-      {
-        name: "LinkedIn",
-        src: "/linkedin.svg",
-        link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
-      },
-      {
-        name: "Github",
-        src: "/github.svg",
-        link: "https://github.com/sandeep-singh-bhandal",
-      },
-    ],
-  },
-];
+export const NavbarData = {
+  title: "Portfolio",
+  navItems: [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Projects", link: "/projects" },
+  ],
+  socials: [
+    {
+      name: "LinkedIn",
+      src: "/linkedin.svg",
+      link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
+    },
+    {
+      name: "Github",
+      src: "/github.svg",
+      link: "https://github.com/sandeep-singh-bhandal",
+    },
+  ],
+};
 
 export const HeroSectionData = {
   greeting: "Hi, I'm Sandeep Singh",
@@ -155,7 +151,7 @@ export const FooterData = [
       {
         logo: "/gmail.svg",
         name: "sandeep.310.singh.310gmail.com",
-        link: "mailto:"
+        link: "mailto:",
       },
     ],
   },
