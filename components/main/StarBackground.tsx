@@ -98,7 +98,7 @@ const StarsBackground = () => {
         height: '100%',
         top: 0,
         left: 0,
-        zIndex: -1,
+        zIndex: 0,
         pointerEvents: 'none',
       }}
     />

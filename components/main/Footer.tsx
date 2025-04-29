@@ -3,6 +3,7 @@ import { FooterData } from "@/constants/data";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const Footer = () => {
   return (
     <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] ">
@@ -29,7 +30,6 @@ const Footer = () => {
                     className="text-[15px] ml-[6px]"
                     href={social.link}
                     target="_blank"
-                    
                   >
                     {social.name}
                   </Link>
