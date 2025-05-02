@@ -50,7 +50,7 @@ const HeroContent = () => {
         </motion.button>
       </div>
       <motion.div
-        variants={slideInFromRight(1.7)}
+        variants={slideInFromRight(0.5)}
         className="w-full h-full flex justify-center items-center max-md:hidden"
       >
         <Image

@@ -7,12 +7,15 @@ const StarsBackground = () => {
 
   useEffect(() => {
     const scene = new THREE.Scene();
+
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
+    camera.position.z = 0; // You are at the center (inside sphere)
+
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -21,18 +24,23 @@ const StarsBackground = () => {
       mountRef.current.appendChild(renderer.domElement);
     }
 
-    const starsCount = 500;
+    // Create stars in a sphere shape
+    const starsCount = 3000;
     const starsGeometry = new THREE.BufferGeometry();
     const positions = new Float32Array(starsCount * 3);
-    const speeds = new Float32Array(starsCount); // har star ka apna speed
 
     for (let i = 0; i < starsCount; i++) {
-      positions[i * 3 + 0] = (Math.random() - 0.5) * 1000; // x
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 1000; // y
-      positions[i * 3 + 2] = -Math.random() * 1000;         // z
+      const theta = Math.random() * Math.PI * 2;
+      const phi = Math.acos((Math.random() * 2) - 1);
+      const radius = 500;
 
-      // Random speed: kuch normal (2-4), kuch shooting star fast (10-20)
-      speeds[i] = Math.random() < 0.97 ? (2 + Math.random() * 2) : (10 + Math.random() * 10);
+      const x = radius * Math.sin(phi) * Math.cos(theta);
+      const y = radius * Math.sin(phi) * Math.sin(theta);
+      const z = radius * Math.cos(phi);
+
+      positions[i * 3 + 0] = x;
+      positions[i * 3 + 1] = y;
+      positions[i * 3 + 2] = z;
     }
 
     starsGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -42,34 +50,20 @@ const StarsBackground = () => {
       size: 1.5,
       sizeAttenuation: true,
       transparent: true,
-      opacity: 0.9,
+      opacity: 0.8,
+      depthWrite: false,
     });
 
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
-    camera.position.z = 0;
-
     const animate = () => {
       requestAnimationFrame(animate);
 
-      const positions = starsGeometry.attributes.position.array as Float32Array;
+      // Rotate the sphere around you (the camera is at center)
+      stars.rotation.y += 0.0015;
+      stars.rotation.x += 0.0005;
 
-      for (let i = 0; i < starsCount; i++) {
-        positions[i * 3 + 2] += 6; // apni speed se move kar
-
-        // Agar star camera ke pass aa gaya, reset karo
-        if (positions[i * 3 + 2] > camera.position.z) {
-          positions[i * 3 + 2] = -1000;
-          positions[i * 3 + 0] = (Math.random() - 0.5) * 1000;
-          positions[i * 3 + 1] = (Math.random() - 0.5) * 1000;
-
-          // Shooting stars random create hote rahenge
-          speeds[i] = Math.random() < 0.97 ? (2 + Math.random() * 2) : (10 + Math.random() * 10);
-        }
-      }
-
-      starsGeometry.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
     };
     animate();

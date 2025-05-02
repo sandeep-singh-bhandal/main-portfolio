@@ -47,7 +47,7 @@ const NavBar = () => {
         </NavbarContent>
         <NavbarContent justify="end">
           {NavbarData.socials.map((item, index) => (
-            <NavbarMenuItem key={index}>
+            <NavbarMenuItem key={index} className="hover:scale-110 transition-all duration-300">
               <Link color="foreground" href={item.link}>
                 <Image
                   src={item.src}

@@ -1,9 +1,11 @@
 export const NavbarData = {
-  title: "Portfolio",
+  title: "< Sandeep Singh />",
   navItems: [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
+    { name: "Resume", link: "/projects" },
+    { name: "Contact", link: "/projects" },
   ],
   socials: [
     {
@@ -111,7 +113,7 @@ export const ProjectsData = {
 
 export const FooterData = [
   {
-    title: "Professional Socials",
+    title: "Sandeep Singh",
     socials: [
       {
         logo: "/linkedin.svg",
