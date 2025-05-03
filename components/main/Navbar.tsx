@@ -36,7 +36,7 @@ const NavBar = () => {
           </NavbarBrand>
         </NavbarContent>
 
-        <NavbarContent className="hidden sm:flex gap-20" justify="center">
+        <NavbarContent className="hidden sm:flex" justify="center">
           {NavbarData.navItems.map((item, index) => (
             <NavbarItem key={index} >
               <Link color="foreground" href={item.link} className="text-lg">

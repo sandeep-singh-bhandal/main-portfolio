@@ -9,7 +9,7 @@ import {
 import { HeroSectionData } from "@/constants/data";
 import Image from "next/image";
 
-const HeroContent = () => {
+const  HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
