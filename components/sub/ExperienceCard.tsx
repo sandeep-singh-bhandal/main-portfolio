@@ -1,5 +1,4 @@
 import {
-  VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
