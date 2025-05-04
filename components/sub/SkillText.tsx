@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   slideInFromLeft,
-  slideInFromTop,
 } from "@/utils/motion";
 import { SkillSectionData } from "@/constants/data";
 import { useInView } from "react-intersection-observer";
