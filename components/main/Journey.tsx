@@ -5,18 +5,37 @@ import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../style";
 import { experiences } from "../../constants/data";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../../utils/motion";
+import { slideInFromBottom } from "../../utils/motion";
 import { ExperienceCard } from "../sub/ExperienceCard";
+import { useInView } from "react-intersection-observer";
 
 const Journey = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
-    <>
-      <motion.div variants={textVariant(0.5)}>
-        <p className={`${styles.sectionSubText} text-center`}>About Me</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>
+    <section className="my-24">
+      <motion.div
+        ref={ref}
+        animate={inView ? "visible" : "hidden"}
+        variants={slideInFromBottom(0.3)}
+      >
+        <motion.p
+          initial="hidden"
+          animate="visible"
+          variants={slideInFromBottom(0.3)}
+          className={`${styles.sectionSubText} text-center`}
+        >
+          About Me
+        </motion.p>
+        <motion.h2
+          initial="hidden"
+          animate="visible"
+          variants={slideInFromBottom(0.5)}
+          className={`${styles.sectionHeadText} text-center`}
+        >
           Work Experience.
-        </h2>
+        </motion.h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
@@ -32,10 +51,8 @@ const Journey = () => {
           ))}
         </VerticalTimeline>
       </div>
-
-      
-    </>
+    </section>
   );
 };
 
-export default SectionWrapper(Journey, "work");
+export default Journey;
