@@ -1,11 +1,11 @@
 "use client";
-
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Journey from "./Journey";
 
 const About = () => {
   return (
-    <section className="min-h-screen w-full  text-white px-6 md:px-20 py-32">
+    <>
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Title */}
         <div className="text-center">
@@ -33,9 +33,9 @@ const About = () => {
               experiences using tools like React, Next.js, and Tailwind CSS.
             </p>
             <p className="text-sm text-gray-400">
-              When I&apos;m not coding, I&apos;m probably designing interfaces, reading
-              about emerging tech, or playing indie games that challenge my
-              logic and creativity.
+              When I&apos;m not coding, I&apos;m probably designing interfaces,
+              reading about emerging tech, or playing indie games that challenge
+              my logic and creativity.
             </p>
           </div>
         </div>
@@ -114,7 +114,9 @@ const About = () => {
           </Link>
         </div>
       </div>
-    </section>
+      <Journey />
+
+    </>
   );
 };
 
