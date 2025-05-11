@@ -38,8 +38,13 @@ const NavBar = () => {
 
         <NavbarContent className="hidden sm:flex" justify="center">
           {NavbarData.navItems.map((item, index) => (
-            <NavbarItem key={index} >
-              <Link color="foreground" href={item.link} className="text-lg">
+            <NavbarItem key={index}>
+              <Link
+                color="foreground"
+                href={item.link}
+                className={`text-lg ${item.name === "Resume" ? "text-purple-500" : ""}`}
+                target={`${item.name === "Resume" ? "_blank" : ""}`}
+              >
                 {item.name}
               </Link>
             </NavbarItem>
@@ -47,7 +52,10 @@ const NavBar = () => {
         </NavbarContent>
         <NavbarContent justify="end">
           {NavbarData.socials.map((item, index) => (
-            <NavbarMenuItem key={index} className="hover:scale-110 transition-all duration-300">
+            <NavbarMenuItem
+              key={index}
+              className="hover:scale-110 transition-all duration-300"
+            >
               <Link color="foreground" href={item.link}>
                 <Image
                   src={item.src}

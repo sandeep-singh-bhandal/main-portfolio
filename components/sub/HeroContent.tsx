@@ -9,7 +9,7 @@ import {
 import { HeroSectionData } from "@/constants/data";
 import Image from "next/image";
 
-const  HeroContent = () => {
+const HeroContent = () => {
   return (
     <motion.div
       initial="hidden"
@@ -41,13 +41,15 @@ const  HeroContent = () => {
         >
           {HeroSectionData.description}
         </motion.p>
-        <motion.button
+        <motion.a
           variants={slideInFromLeft(1.4)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full lg:w-fit max-sm:w-fit px-14 
           hover:scale-[102%] md:mx-auto lg:mx-0"
+          href="/Sandeep_Singh_Resume.pdf"
+          download
         >
           {HeroSectionData.buttonTitle}
-        </motion.button>
+        </motion.a>
       </div>
       <motion.div
         variants={slideInFromRight(0.5)}

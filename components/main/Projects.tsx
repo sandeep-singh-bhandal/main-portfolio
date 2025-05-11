@@ -25,7 +25,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             demoLink={project.link}
-            animationDelay={index * 0.2}
+            animationDelay={0}
           />
         ))}
       </div>

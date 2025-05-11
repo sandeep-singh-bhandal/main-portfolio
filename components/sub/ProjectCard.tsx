@@ -1,10 +1,11 @@
 "use client";
 
-import {  slideInFromTop } from "@/utils/motion";
+import {  slideInFromBottom } from "@/utils/motion";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
 interface Props {
   src: string;
@@ -15,12 +16,16 @@ interface Props {
 }
 
 const ProjectCard = ({ src, title, description, demoLink,animationDelay }: Props) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
   return (
     <motion.div
       initial="hidden"
-      animate="visible"
+      animate={inView?"visible":"hidden"}
+      ref={ref}
       className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] w-96 max-lg:w-9/12 max-sm:w-full cursor-pointer group hover:scale-105 transition-transform duration-500"
-      variants={slideInFromTop(animationDelay)}
+      variants={slideInFromBottom(animationDelay)}
       transition={{ duration: 0.5, ease: "easeInOut" }}
     >
       <Image

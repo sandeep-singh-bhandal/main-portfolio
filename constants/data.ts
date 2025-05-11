@@ -1,10 +1,19 @@
+import { FiLinkedin, FiGithub } from "react-icons/fi";
+import { RiBracesFill } from "react-icons/ri";
+import { FaPhoneAlt, FaInstagram } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
+
 export const NavbarData = {
   title: "< Sandeep Singh />",
   navItems: [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
     { name: "Projects", link: "/projects" },
-    { name: "Resume", link: "/projects" },
+    {
+      name: "Resume",
+      link: "https://drive.google.com/file/d/1MTpbxo-N56lWV18XPbsg7EiXb3Xr9Exr/view?usp=drive_link",
+    },
     { name: "Contact", link: "/projects" },
   ],
   socials: [
@@ -111,53 +120,84 @@ export const ProjectsData = {
   ],
 };
 
-export const FooterData = [
-  {
-    title: "Sandeep Singh",
-    socials: [
-      {
-        logo: "/linkedin.svg",
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
-      },
-      {
-        logo: "/github.svg",
-        name: "Github",
-        link: "https://github.com/sandeep-singh-bhandal",
-      },
-    ],
-  },
-  {
-    title: "Social Media",
-    socials: [
-      {
-        logo: "/instagram.svg",
-        name: "Instagram",
-        link: "https://www.instagram.com/_sunny_310/",
-      },
-      {
-        logo: "/twitter.svg",
-        name: "Twitter",
-        link: "",
-      },
-    ],
-  },
-  {
-    title: "Contact Me",
-    socials: [
-      {
-        logo: "/phone.svg",
-        name: "+91 93997 68186",
-        link: "https://wa.me/+919399768186",
-      },
-      {
-        logo: "/gmail.svg",
-        name: "sandeep.310.singh.310gmail.com",
-        link: "mailto:",
-      },
-    ],
-  },
-];
+export const FooterData = {
+  icon: RiBracesFill,
+  about:
+    "I am a Frontend Developer crafting smooth interfaces and occasionally arguing with CSS.",
+  ending: "Thanks for stopping by!",
+  social: [
+    {
+      icon: FiLinkedin,
+      link: "https://www.linkedin.com/in/sandeep-singh-bhandal-a4804932b/",
+    },
+    {
+      icon: FiGithub,
+      link: "https://github.com/sandeep-singh-bhandal",
+    },
+  ],
+  links:[
+    {
+      heading: "Quick Links",
+      links: [
+        {
+          icon: "",
+          name: "Home",
+          href: "/",
+        },
+        {
+          icon: "",
+          name: "About",
+          href: "/about",
+        },
+        {
+          icon: "",
+          name: "Projects",
+          href: "/projects",
+        },
+        {
+          icon: "",
+          name: "Contact",
+          href: "/contact",
+        },
+      ],
+    },
+    {
+      heading: "Let's Connect!",
+      links: [
+        {
+          icon: FaPhoneAlt,
+          name: "Phone",
+          href: "/",
+        },
+        {
+          icon: IoIosMail,
+          name: "Email",
+          href: "/",
+        },
+        {
+          icon: FaLocationDot,
+          name: "Raipur, Chattisgarh, India",
+          href: "/",
+        },
+      ],
+    },
+    {
+      heading: "Follow Me",
+      links: [
+        {
+          icon: FaInstagram,
+          name: "_sunny_310",
+          href: "https://www.instagram.com/_sunny_310/",
+        },
+        {
+          icon: FaXTwitter,
+          name: "_sunny_3_10",
+          href: "https://x.com/Sunny_3_10",
+        },
+      ],
+    },
+  ],
+};
 export const experiences = [
   {
     title: "React.js Developer",
