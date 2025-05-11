@@ -1,16 +1,10 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { slideInFromBottom } from "@/utils/motion";
 import { FooterData } from "@/constants/data";
-import { FiLinkedin, FiGithub } from "react-icons/fi";
-import { RiBracesFill } from "react-icons/ri";
-import { FaPhoneAlt, FaInstagram } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const { ref, inView } = useInView({
