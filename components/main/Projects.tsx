@@ -4,7 +4,6 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import { ProjectsData } from "@/constants/data";
-import { PinContainer } from "../ui/3d-pin";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 const Projects = () => {
