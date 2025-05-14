@@ -13,7 +13,7 @@ const Journey = () => {
     triggerOnce: true,
   });
   return (
-    <section className="my-24">
+    <section className="my-12 max-md:my-2">
       <motion.div
         ref={ref}
         animate={inView ? "visible" : "hidden"}
@@ -36,7 +36,7 @@ const Journey = () => {
           Work Experience.
         </motion.h2>
       </motion.div>
-      <div className="mt-20 flex flex-col">
+      <div className="mt-10 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard

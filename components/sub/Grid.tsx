@@ -1,9 +1,13 @@
 import { gridItems } from "@/constants/data";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import { motion } from "framer-motion";
+import { slideInFromRight } from "@/utils/motion";
 
 const Grid = () => {
   return (
-    <section id="about">
+    <motion.section initial="hidden"
+        animate="visible"
+        variants={slideInFromRight(0.4)}>
       <BentoGrid className="w-full py-20">
         {gridItems.map((item, i) => (
           <BentoGridItem
@@ -21,7 +25,7 @@ const Grid = () => {
           />
         ))}
       </BentoGrid>
-    </section>
+    </motion.section>
   );
 };
 

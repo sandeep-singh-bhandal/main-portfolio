@@ -1,17 +1,18 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
 
 // Also install this npm i --save-dev @types/react-lottie
 // import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
-
 // import { BackgroundGradientAnimation } from "./GradientBg";
 // import GridGlobe from "./GridGlobe";
 // import animationData from "@/data/confetti.json";
 import MagicButton from "../sub/MagicButton";
+import { slideInFromLeft, slideInFromRight } from "@/utils/motion";
 
 export const BentoGrid = ({
   className,
@@ -38,7 +39,6 @@ export const BentoGridItem = ({
   id,
   title,
   description,
-  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -53,7 +53,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["Demo", "Typescript","React.js"];
+  const leftLists = ["Demo", "Typescript", "React.js"];
   const rightLists = ["Tailwind CSS", "Next.js", "Demo"];
 
   const [copied, setCopied] = useState(false);
@@ -100,8 +100,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -177,8 +178,9 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 {/* <Lottie options={defaultOptions} height={200} width={400} /> */}

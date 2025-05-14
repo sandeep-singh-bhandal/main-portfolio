@@ -7,7 +7,7 @@ import Grid from "../sub/Grid"
 
 const About = () => {
   return (
-    <div className="sm:px-16 px-6 sm:py-16 py-10 max-w-full mx-auto relative z-0">
+    <div className="px-16 pt-16 max-sm:px-6  max-w-full relative z-0">
       <motion.p
         initial="hidden"
         animate="visible"
@@ -32,8 +32,7 @@ const About = () => {
         className="mt-4 text-gray-400 text-[17px] max-w-3xl leading-[30px]"
       >
         I&apos;m a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I&apos;m a quick learner and collaborate closely with clients to
+        JavaScript, and expertise in frameworks like React, Next.js. I&apos;m a quick learner and collaborate closely with clients to
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let&apos;s work together to bring your ideas to life!
       </motion.p>

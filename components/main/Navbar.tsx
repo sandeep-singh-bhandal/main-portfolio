@@ -42,10 +42,17 @@ const NavBar = () => {
               <Link
                 color="foreground"
                 href={item.link}
-                className={`text-lg ${item.name === "Resume" ? "text-purple-500" : ""}`}
-                target={`${item.name === "Resume" ? "_blank" : ""}`}
+                target={item.name === "Resume" ? "_blank" : ""}
+                className={`relative group text-lg ${
+                  item.name === "Resume"
+                    ? "text-purple-500 border-b-2 border-purple-500"
+                    : ""
+                }`}
               >
                 {item.name}
+                {item.name !== "Resume" && (
+                  <span className="absolute left-1/2 bottom-[-2px] rounded-full w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
+                )}
               </Link>
             </NavbarItem>
           ))}
@@ -71,7 +78,16 @@ const NavBar = () => {
         <NavbarMenu className="flex gap-7 justify-center items-center">
           {NavbarData.navItems.map((item, index) => (
             <NavbarItem key={index}>
-              <Link className="text-3xl" color="foreground" href={item.link}>
+              <Link
+                color="foreground"
+                href={item.link}
+                className={`text-3xl ${
+                  item.name === "Resume"
+                    ? "text-purple-500 border-b-2 border-purple-500"
+                    : ""
+                }`}
+                target={`${item.name === "Resume" ? "_blank" : ""}`}
+              >
                 {item.name}
               </Link>
             </NavbarItem>

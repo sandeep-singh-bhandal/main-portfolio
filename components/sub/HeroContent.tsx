@@ -14,18 +14,18 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-row items-center justify-center px-20 max-md:px-8 max-sm:mt-32 w-full z-[20]"
+      className="flex flex-row items-center justify-center px-20 max-md:px-8 max-sm:mt-20 w-full z-[20]"
     >
-      <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
+      <div className="h-full w-full flex flex-col gap-5 max-sm:gap-0 justify-center m-auto text-start">
         <motion.div variants={slideInFromTop(0.5)} className="px-1">
-          <h1 className="Welcome-text text-3xl h-[40px]">
+          <h1 className="Welcome-text text-3xl max-md:text-lg h-[40px]">
             {HeroSectionData.greeting}
           </h1>
         </motion.div>
 
         <motion.div
           variants={slideInFromLeft(0.8)}
-          className="flex flex-col gap-6 text-6xl md:text-5xl max-md:text-4xl font-bold text-white max-w-[600px] w-auto h-auto "
+          className="flex flex-col gap-6 text-6xl md:text-5xl max-md:text-3xl font-bold text-white max-w-[600px] w-auto h-auto "
         >
           <span>
             Providing{" "}

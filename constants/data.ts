@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 
 export const NavbarData = {
-  title: "< Sandeep Singh />",
+  title: "< Sandeep />",
   navItems: [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
@@ -163,7 +163,7 @@ export const ProjectsData = {
     title: "Admin Dashboard",
     des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
     img: "/admin-dashboard.png",
-    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    iconLists: ["/ts.png", "/react.png", "tailwind.png"],
     link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
   },
   {
@@ -171,7 +171,7 @@ export const ProjectsData = {
     title: "Food Catering Website",
     des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
     img: "/loves-cuisine-yummy.png",
-    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    iconLists: ["/ts.png", "next.png", "tailwind.png"],
     link: "https://www.lovescuisine.com",
   },
   {
@@ -179,7 +179,7 @@ export const ProjectsData = {
     title: "Modern Landing Page",
     des: "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
     img: "/modern-landing-page.png",
-    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    iconLists: ["/ts.png", "/react.png", "tailwind.png"],
     link: "https://modern-landing-page-pied.vercel.app/",
   }
 ],
@@ -315,23 +315,5 @@ export const experiences = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum sint odio quod itaque iusto doloremque officia modi, est libero dolor accusantium nihil expedita delectus, commodi quia. Quo recusandae perferendis debitis!",
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum sint odio quod itaque iusto doloremque officia modi, est libero dolor accusantium nihil expedita delectus, commodi quia. Quo recusandae perferendis debitis!",
     ],
-  },
-];
-export const services = [
-  {
-    title: "Web Developer",
-    // icon: web,
-  },
-  {
-    title: "React Native Developer",
-    // icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    // icon: backend,
-  },
-  {
-    title: "Content Creator",
-    // icon: creator,
   },
 ];
