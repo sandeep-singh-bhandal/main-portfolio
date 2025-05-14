@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { slideInFromBottom, slideInFromLeft } from "@/utils/motion";
 import { ProjectsData } from "@/constants/data";
 import { PinContainer } from "../ui/3d-pin";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -27,7 +28,7 @@ const Projects = () => {
         My Recent Projects{" "}
       </motion.h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16">
-        {ProjectsData.projects.map((item,index) => (
+        {ProjectsData.projects.map((item, index) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
@@ -35,14 +36,16 @@ const Projects = () => {
             <motion.div
               initial="hidden"
               animate="visible"
-              variants={slideInFromBottom(index*0.5)}
+              variants={slideInFromBottom(index * 0.5)}
             >
               <PinContainer title={item.title} href={item.link}>
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[24vh] lg:h-[30vh] mb-10">
-                  <img
+                  <Image
+                    height={1000}
+                    width={1000}
                     src={item.img}
                     alt="cover"
-                    className="z-10 absolute bottom-0"
+                    className="z-10 absolute bottom-0 rounded-xl"
                   />
                 </div>
 

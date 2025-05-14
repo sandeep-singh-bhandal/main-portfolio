@@ -163,7 +163,7 @@ export const ProjectsData = {
     title: "Admin Dashboard",
     des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
     img: "/admin-dashboard.png",
-    iconLists: ["/ts.png", "/react.png", "tailwind.png"],
+    iconLists: ["/ts.png", "/react.png", "/tailwind.png"],
     link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
   },
   {
