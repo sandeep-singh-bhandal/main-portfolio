@@ -29,7 +29,69 @@ export const NavbarData = {
     },
   ],
 };
+export const gridItems = [
+  {
+    id: 1,
+    title: "I prioritize client collaboration, fostering open communication ",
+    description: "",
+    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    imgClassName: "w-full h-full",
+    titleClassName: "justify-end",
+    img: "/b1.svg",
+    spareImg: "",
+  },
+  {
+    id: 2,
+    title: "I'm very flexible with time zone communications",
+    description: "",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-start",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 3,
+    title: "My tech stack",
+    description: "I constantly try to improve",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-center",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 4,
+    title: "Tech enthusiast with a passion for development.",
+    description: "",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    imgClassName: "",
+    titleClassName: "justify-start",
+    img: "/grid.svg",
+    spareImg: "/b4.svg",
+  },
 
+  {
+    id: 5,
+    title: "Currently building a JS Animation library",
+    description: "The Inside Scoop",
+    className: "md:col-span-3 md:row-span-2",
+    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+    titleClassName: "justify-center md:justify-start lg:justify-center",
+    img: "/b5.svg",
+    spareImg: "/grid.svg",
+  },
+  // {
+  //   id: 6,
+  //   title: "Do you want to start a project together?",
+  //   description: "",
+  //   className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+  //   imgClassName: "",
+  //   titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+  //   img: "",
+  //   spareImg: "",
+  // },
+];
 export const HeroSectionData = {
   greeting: "Hi, I'm Sandeep Singh",
   description:
@@ -96,28 +158,31 @@ export const SkillSectionData = {
 export const ProjectsData = {
   title: "My Projects",
   projects: [
-    {
-      src: "/admin-dashboard.png",
-      title: "Admin Dashboard",
-      description:
-        "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
-      link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
-    },
-    {
-      src: "/loves-cuisine-yummy.png",
-      title: "Food Catering Website",
-      description:
-        "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
-      link: "https://www.lovescuisine.com",
-    },
-    {
-      src: "/modern-landing-page.png",
-      title: "Modern Landing Page",
-      description:
-        "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
-      link: "https://modern-landing-page-pied.vercel.app/",
-    },
-  ],
+  {
+    id: 1,
+    title: "Admin Dashboard",
+    des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
+    img: "/admin-dashboard.png",
+    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
+  },
+  {
+    id: 2,
+    title: "Food Catering Website",
+    des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
+    img: "/loves-cuisine-yummy.png",
+    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    link: "https://www.lovescuisine.com",
+  },
+  {
+    id: 3,
+    title: "Modern Landing Page",
+    des: "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
+    img: "/modern-landing-page.png",
+    iconLists: ["/ts.png", "/react.png", "next.png", "tailwind.png"],
+    link: "https://modern-landing-page-pied.vercel.app/",
+  }
+],
 };
 
 export const FooterData = {

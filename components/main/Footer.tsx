@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-[15px] mt-2 max-sm:mt-12">
+        <div className="text-[15px] mt-2 max-sm:mt-12 text-gray-400">
           &copy; 2025 Sandeep Singh Bhandal | Portolio. All rights reserved.
         </div>
       </div>

@@ -24,7 +24,7 @@ const Journey = () => {
           initial="hidden"
           animate="visible"
           variants={slideInFromBottom(0.3)}
-          className={`${styles.sectionSubText} text-center`}
+          className="sm:text-[18px] text-[14px] text-[#9353d3] uppercase tracking-wider text-center"
         >
           About Me
         </motion.p>
@@ -32,7 +32,7 @@ const Journey = () => {
           initial="hidden"
           animate="visible"
           variants={slideInFromBottom(0.5)}
-          className={`${styles.sectionHeadText} text-center`}
+          className={"text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] text-center"}
         >
           Work Experience.
         </motion.h2>
