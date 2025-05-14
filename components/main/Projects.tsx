@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import { ProjectsData } from "@/constants/data";
 import { PinContainer } from "../ui/3d-pin";
-import Link from "next/link";
 
 const Projects = () => {
   return (
