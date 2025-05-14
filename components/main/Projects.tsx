@@ -27,7 +27,7 @@ const Projects = () => {
           My Recent Projects{" "}
         </motion.h1>
       </div>
-      <div className="flex flex-wrap justify-start p-4">
+      <div className="flex flex-wrap justify-center p-4 gap-10">
         {ProjectsData.projects.map((item) => (
           <CardContainer className="inter-var" key={item.id}>
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-[#9353d3]/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl px-4 py-1 border  ">

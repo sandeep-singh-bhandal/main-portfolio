@@ -7,9 +7,9 @@ const page = () => {
   return (
     <main className="h-full w-full">
       <div className="flex flex-col  max-md:gap-10">
-        <Navbar />
+        {/* <Navbar />
         <About />
-        <Footer />
+        <Footer /> */}
       </div>
     </main>
   )
