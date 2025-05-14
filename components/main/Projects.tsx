@@ -2,65 +2,61 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { slideInFromBottom, slideInFromLeft } from "@/utils/motion";
+import { slideInFromLeft } from "@/utils/motion";
 import { ProjectsData } from "@/constants/data";
 import { PinContainer } from "../ui/3d-pin";
-import Image from "next/image";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 const Projects = () => {
   return (
-    <div className="p-10">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={slideInFromLeft(0.3)}
-        className="uppercase text-lg text-center"
-      >
-        A small collection of
-      </motion.div>
-      <motion.h1
-        initial="hidden"
-        animate="visible"
-        className="text-6xl max-sm:text-3xl font-semibold text-[#9253d3] 
-      max-md:pt-2 pt-3 pb-6 text-center"
-        variants={slideInFromLeft(0.7)}
-      >
-        My Recent Projects{" "}
-      </motion.h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-16">
-        {ProjectsData.projects.map((item, index) => (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={slideInFromBottom(index * 0.5)}
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
-          >
-            <PinContainer title={item.title} href={item.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[24vh] lg:h-[30vh] mb-10">
-                <Image
-                  height={1000}
-                  width={1000}
+    <>
+      <div className="px-10 mt-10">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={slideInFromLeft(0.3)}
+          className="uppercase text-lg text-center"
+        >
+          A small collection of
+        </motion.div>
+        <motion.h1
+          initial="hidden"
+          animate="visible"
+          className="text-6xl max-sm:text-[32px] font-semibold text-[#9253d3] max-md:pt-2 pt-3 text-center"
+          variants={slideInFromLeft(0.7)}
+        >
+          My Recent Projects{" "}
+        </motion.h1>
+      </div>
+      <div className="flex flex-wrap justify-start p-4">
+        {ProjectsData.projects.map((item) => (
+          <CardContainer className="inter-var" key={item.id}>
+            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-[#9353d3]/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl px-4 py-1 border  ">
+              {/* image */}
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
                   src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0 rounded-xl"
+                  height="1000"
+                  width="1000"
+                  className="h-auto w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
                 />
-              </div>
-
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              </CardItem>
+              {/* heading */}
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600 dark:text-white mt-4"
+              >
                 {item.title}
-              </h1>
-
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
+              </CardItem>
+              {/* description */}
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
               >
                 {item.des}
-              </p>
-
+              </CardItem>
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
@@ -83,37 +79,12 @@ const Projects = () => {
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
               </div>
-            </PinContainer>
-          </motion.div>
+            </CardBody>
+          </CardContainer>
         ))}
       </div>
-    </div>
+    </>
   );
 };
-
-// "use client";
-// import React from "react";
-// import ProjectCard from "../sub/ProjectCard";
-// import { ProjectsData } from "@/constants/data";
-
-// const Projects = () => {
-//   return (
-//     <section id="projects" className="mt-16 max-sm:mt-32">
-
-//       <div className=" flex flex-wrap justify-center gap-10 px-10">
-//         {ProjectsData.projects.map((project, index) => (
-//           <ProjectCard
-//             key={index}
-//             src={project.src}
-//             title={project.title}
-//             description={project.description}
-//             demoLink={project.link}
-//             animationDelay={0}
-//           />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
 
 export default Projects;

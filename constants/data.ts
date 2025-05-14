@@ -158,21 +158,21 @@ export const SkillSectionData = {
 export const ProjectsData = {
   title: "My Projects",
   projects: [
+    {
+      id: 1,
+      title: "Food Catering Website",
+      des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
+      img: "/loves-cuisine-yummy.png",
+      iconLists: ["/ts.png", "next.png", "tailwind.png"],
+      link: "https://www.lovescuisine.com",
+    },
   {
-    id: 1,
+    id: 2,
     title: "Admin Dashboard",
     des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
     img: "/admin-dashboard.png",
     iconLists: ["/ts.png", "/react.png", "/tailwind.png"],
     link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
-  },
-  {
-    id: 2,
-    title: "Food Catering Website",
-    des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
-    img: "/loves-cuisine-yummy.png",
-    iconLists: ["/ts.png", "next.png", "tailwind.png"],
-    link: "https://www.lovescuisine.com",
   },
   {
     id: 3,
