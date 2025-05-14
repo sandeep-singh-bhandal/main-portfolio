@@ -21,7 +21,7 @@ const Projects = () => {
       <motion.h1
         initial="hidden"
         animate="visible"
-        className="text-6xl max-sm:text-4xl font-semibold text-[#9253d3] 
+        className="text-6xl max-sm:text-3xl font-semibold text-[#9253d3] 
       max-md:pt-2 pt-3 pb-6 text-center"
         variants={slideInFromLeft(0.7)}
       >
