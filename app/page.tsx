@@ -1,7 +1,6 @@
-import Footer from "@/components/main/Footer";
-import Hero from "@/components/main/Hero";
-import Navbar from "@/components/main/Navbar";
-import Skills from "@/components/main/Skills";
+import Footer from "@/components/Footer";
+import Hero from "@/pages/Hero";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
@@ -9,7 +8,6 @@ export default function Home() {
       <div className="flex flex-col gap-20 max-md:gap-10 ">
         <Navbar />
         <Hero />
-        <Skills />
         <Footer />
       </div>
     </main>

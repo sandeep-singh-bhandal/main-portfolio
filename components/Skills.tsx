@@ -2,18 +2,17 @@ import {
     SkillSectionData,
   } from "@/constants/data";
   import React from "react";
-  import SkillDataProvider from "../sub/SkillDataProvider";
-  import SkillText from "../sub/SkillText";
+  import SkillDataProvider from "@/components/SkillDataProvider";
+  import SkillText from "@/components/SkillText";
 
   
   const Skills = () => {
     return (
       <section
         id="skills"
-        className="flex flex-col items-center justify-center h-full relative max-md:px-6"
+        className="flex flex-col items-center justify-center h-full relative max-md:px-6 mt-20"
       >
         <SkillText />
-  
         <div className="flex flex-row justify-center flex-wrap gap-10 items-center px-8 mb-10 ">
           {SkillSectionData.Skill_data.map((item, index) => (
             <SkillDataProvider
@@ -25,9 +24,6 @@ import {
             />
           ))}
         </div>
-  
-        
-  
         <div className="w-full h-full absolute">
           <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
             <video

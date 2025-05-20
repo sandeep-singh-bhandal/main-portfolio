@@ -3,9 +3,9 @@ import React from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
-import { experiences } from "../../constants/data";
-import { slideInFromBottom } from "../../utils/motion";
-import { ExperienceCard } from "../sub/ExperienceCard";
+import { experiences } from "@/constants/data";
+import { slideInFromBottom } from "../utils/motion";
+import { ExperienceCard } from "./ExperienceCard";
 import { useInView } from "react-intersection-observer";
 
 const Journey = () => {

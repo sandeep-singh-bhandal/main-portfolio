@@ -1,5 +1,5 @@
 import { gridItems } from "@/constants/data";
-import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { motion } from "framer-motion";
 import { slideInFromRight } from "@/utils/motion";
 

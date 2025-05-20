@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { slideInFromBottom } from "@/utils/motion";
 import { FooterData } from "@/constants/data";
+// import { Meteors } from "./ui/shooting-stars";
 
 const Footer = () => {
   const { ref, inView } = useInView({
@@ -16,7 +17,7 @@ const Footer = () => {
       animate={inView ? "visible" : "hidden"}
       ref={ref}
       variants={slideInFromBottom(0.1)}
-      className="w-full xl:w-3/4 h-full mx-auto rounded-tl-4xl rounded-tr-4xl text-gray-200 pb-6 px-14 pt-14 max-md:p-10 bg-[#0a0a23]/60 backdrop-blur-xs z-1 border-x-2 border-t-2 border-[#0a0a23] shadow-[0_0_30px_#151546]"
+      className="relative w-full xl:w-3/4 h-full mx-auto rounded-tl-4xl rounded-tr-4xl text-gray-200 pb-6 px-14 pt-14 max-md:p-10 bg-[#0a0a23]/60 backdrop-blur-xs z-1 border-x-2 border-t-2 border-[#0a0a23] shadow-[0_0_30px_#151546]"
     >
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full h-full flex flex-row justify-around gap-7 max-[873px]:flex-col">
@@ -63,7 +64,7 @@ const Footer = () => {
                           <Link
                             href={item.href}
                             target={`${
-                              item.href.slice(0,1) === "/" ? "" : "_blank"
+                              item.href.slice(0, 1) === "/" ? "" : "_blank"
                             }`}
                           >
                             {item.name}
@@ -81,6 +82,7 @@ const Footer = () => {
         <div className="text-[15px] mt-2 max-sm:mt-12 text-gray-400">
           &copy; 2025 Sandeep Singh Bhandal | Portolio. All rights reserved.
         </div>
+        {/* <Meteors className="absolute" /> */}
       </div>
     </motion.div>
   );

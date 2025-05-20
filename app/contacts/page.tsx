@@ -1,6 +1,6 @@
-import Contact from '@/components/main/Contact'
-import Footer from '@/components/main/Footer'
-import Navbar from '@/components/main/Navbar'
+import Contact from '@/pages/Contact'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const page = () => {

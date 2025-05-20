@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import {  slideInFromLeft } from "../../utils/motion";
-import Journey from "./Journey";
-import Grid from "../sub/Grid"
+import {  slideInFromLeft } from "../utils/motion";
+import Journey from "../components/Journey";
+import Grid from "../components/Grid"
 
 const About = () => {
   return (
