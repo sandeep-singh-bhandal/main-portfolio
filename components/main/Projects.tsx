@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { slideInFromLeft } from "@/utils/motion";
 import { ProjectsData } from "@/constants/data";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -27,10 +28,10 @@ const Projects = () => {
           My Recent Projects{" "}
         </motion.h1>
       </div>
-      <div className="flex flex-wrap justify-center p-4 gap-10">
+      <div className="flex flex-wrap justify-between p-4 max-sm:gap-15">
         {ProjectsData.projects.map((item) => (
           <CardContainer className="inter-var" key={item.id}>
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-[#9353d3]/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl px-4 py-1 border  ">
+            <CardBody className="bg-gray-50 relative group/card dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl px-4 py-1 border  ">
               {/* image */}
               <CardItem translateZ="100" className="w-full mt-4">
                 <img
@@ -56,12 +57,15 @@ const Projects = () => {
               >
                 {item.des}
               </CardItem>
-              <div className="flex items-center justify-between mt-7 mb-3">
+              <CardItem
+                translateZ="40"
+                className="flex items-center justify-between mt-7 mb-3 w-full"
+              >
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-black w-10 h-10 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
@@ -71,13 +75,16 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                <Link
+                  href={item.link}
+                  className="flex justify-center items-center"
+                >
+                  <p className="flex lg:text-xl text-md hover:text-white transition-all duration-500 text-gray-300">
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
-              </div>
+                  <FaLocationArrow className="ms-2" color="#CBACF9" />
+                </Link>
+              </CardItem>
             </CardBody>
           </CardContainer>
         ))}
