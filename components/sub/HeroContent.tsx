@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import {
   slideInFromLeft,
   slideInFromRight,
-  slideInFromTop,
 } from "@/utils/motion";
 import { HeroSectionData } from "@/constants/data";
 import Image from "next/image";
@@ -17,14 +16,14 @@ const HeroContent = () => {
       className="flex flex-row items-center justify-center px-20 max-md:px-8 max-sm:mt-20 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 max-sm:gap-0 justify-center m-auto text-start">
-        <motion.div variants={slideInFromTop(0.5)} className="px-1">
+        <motion.div variants={slideInFromLeft(0.2)} className="px-1">
           <h1 className="Welcome-text text-3xl max-md:text-lg h-[40px]">
             {HeroSectionData.greeting}
           </h1>
         </motion.div>
 
         <motion.div
-          variants={slideInFromLeft(0.8)}
+          variants={slideInFromLeft(0.3)}
           className="flex flex-col gap-6 text-6xl md:text-5xl max-md:text-3xl font-bold text-white max-w-[600px] w-auto h-auto "
         >
           <span>
@@ -36,13 +35,13 @@ const HeroContent = () => {
           </span>
         </motion.div>
         <motion.p
-          variants={slideInFromLeft(1.1)}
+          variants={slideInFromLeft(0.4)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
           {HeroSectionData.description}
         </motion.p>
         <motion.a
-          variants={slideInFromLeft(1.4)}
+          variants={slideInFromLeft(0.5)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg w-full lg:w-fit max-sm:w-fit px-14 
           hover:scale-[102%] md:mx-auto lg:mx-0"
           href="/Sandeep_Singh_Resume.pdf"
@@ -52,7 +51,7 @@ const HeroContent = () => {
         </motion.a>
       </div>
       <motion.div
-        variants={slideInFromRight(0.5)}
+        variants={slideInFromRight(0.6)}
         className="w-full h-full flex justify-center items-center max-md:hidden"
       >
         <Image
