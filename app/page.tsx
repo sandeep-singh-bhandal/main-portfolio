@@ -1,15 +1,13 @@
-import Footer from "@/components/Footer";
-import Hero from "@/pages/Hero";
-import Navbar from "@/components/Navbar";
+import HeroContent from "@/components/HeroContent";
+import Skills from "@/components/Skills";
 
 export default function Home() {
   return (
     <main className="h-full w-full">
-      <div className="flex flex-col gap-20 max-md:gap-10 ">
-        <Navbar />
-        <Hero />
-        <Footer />
-      </div>
+        <section className="relative flex flex-col h-full w-full mt-10">
+          <HeroContent />
+          <Skills />
+        </section>
     </main>
   );
 }

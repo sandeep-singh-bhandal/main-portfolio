@@ -10,7 +10,7 @@ import {
     return (
       <section
         id="skills"
-        className="flex flex-col items-center justify-center h-full relative max-md:px-6 mt-20"
+        className="flex flex-col items-center justify-center h-full relative max-md:px-6 my-20"
       >
         <SkillText />
         <div className="flex flex-row justify-center flex-wrap gap-10 items-center px-8 mb-10 ">

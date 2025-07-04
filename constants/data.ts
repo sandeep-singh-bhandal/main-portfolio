@@ -98,7 +98,6 @@ export const HeroSectionData = {
     "I'm a passionate frontend developer with a keen interest in creating dynamic and responsive web applications. I have a strong foundation in HTML, CSS, JavaScript, and React, and I am always eager to learn new technologies and improve my skills. My goal is to build user-friendly interfaces that provide an exceptional user experience.",
   buttonTitle: "Download Resume",
 };
-
 export const SkillSectionData = {
   title: "My Skills",
   subtitle1: "Making apps with modern technologies",
@@ -154,7 +153,6 @@ export const SkillSectionData = {
     },
   ],
 };
-
 export const ProjectsData = {
   title: "My Projects",
   projects: [
@@ -181,10 +179,17 @@ export const ProjectsData = {
     img: "/modern-landing-page.png",
     iconLists: ["/ts.png", "/react.png", "tailwind.png"],
     link: "https://modern-landing-page-pied.vercel.app/",
-  }
+  },
+  {
+  id: 4,
+  title: "Pure Pride Pharma",
+  des: "Pure Pride Pharma is a pharmacy website developed using Next.js and Tailwind CSS, that features a clean, responsive design and includes core pages like Home, About, Products, and Contact. Each product has its own dedicated detail page, implemented through dynamic and nested routing in Next.js.",
+  img: "/pure-pride-pharma.png",
+  iconLists: ["/ts.png", "/next.png", "tailwind.png"],
+  link: "https://purepridepharma.in",
+}
 ],
 };
-
 export const FooterData = {
   icon: RiBracesFill,
   about:
