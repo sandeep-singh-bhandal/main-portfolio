@@ -158,37 +158,45 @@ export const ProjectsData = {
   projects: [
     {
       id: 1,
+      title: "GreenCart - A Full Stack Grocery Delivery App",
+      des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
+      img: "/greencart.png",
+      iconLists: ["/react.png", "tailwind.png","express.png","mongodb.png"],
+      link: "https://www.lovescuisine.com",
+    },
+    {
+      id: 2,
       title: "Food Catering Website",
       des: "A Live Hosted Food Catering Website delivered to USA client built with Next.js and Tailwind CSS. It features a modern design, responsive layout, and showcases various food items and services offered by the catering business. ",
       img: "/loves-cuisine-yummy.png",
       iconLists: ["/ts.png", "next.png", "tailwind.png"],
       link: "https://www.lovescuisine.com",
     },
-  {
-    id: 2,
-    title: "Admin Dashboard",
-    des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
-    img: "/admin-dashboard.png",
-    iconLists: ["/ts.png", "/react.png", "/tailwind.png"],
-    link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
-  },
-  {
-    id: 3,
-    title: "Modern Landing Page",
-    des: "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
-    img: "/modern-landing-page.png",
-    iconLists: ["/ts.png", "/react.png", "tailwind.png"],
-    link: "https://modern-landing-page-pied.vercel.app/",
-  },
-  {
-  id: 4,
-  title: "Pure Pride Pharma",
-  des: "Pure Pride Pharma is a pharmacy website developed using Next.js and Tailwind CSS, that features a clean, responsive design and includes core pages like Home, About, Products, and Contact. Each product has its own dedicated detail page, implemented through dynamic and nested routing in Next.js.",
-  img: "/pure-pride-pharma.png",
-  iconLists: ["/ts.png", "/next.png", "tailwind.png"],
-  link: "https://purepridepharma.in",
-}
-],
+    {
+      id: 3,
+      title: "Pure Pride Pharma",
+      des: "Pure Pride Pharma is a pharmacy website built with Next.js and Tailwind CSS. It features a clean, responsive design and includes core pages like Home, About, Products, and Contact. Each product has its own detail page.",
+      img: "/pure-pride-pharma.png",
+      iconLists: ["/ts.png", "/next.png", "tailwind.png"],
+      link: "https://purepridepharma.in",
+    },
+    {
+      id: 4,
+      title: "Modern Landing Page",
+      des: "A modern landing page template built with React and Tailwind CSS. It includes sections for showcasing features, pricing, faq and download links. The design is clean and user-friendly, making it suitable for various applications.",
+      img: "/modern-landing-page.png",
+      iconLists: ["/ts.png", "/react.png", "tailwind.png"],
+      link: "https://modern-landing-page-pied.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "Admin Dashboard",
+      des: "A fully responsive admin dashboard template built with React and Tailwind CSS. It includes various charts, tables, and UI components to manage and visualize data effectively. The design is modern and user-friendly",
+      img: "/admin-dashboard.png",
+      iconLists: ["/ts.png", "/react.png", "/tailwind.png"],
+      link: "https://admin-dashboard-black-nine-17.vercel.app/ecommerce",
+    },
+  ],
 };
 export const FooterData = {
   icon: RiBracesFill,
@@ -205,7 +213,7 @@ export const FooterData = {
       link: "https://github.com/sandeep-singh-bhandal",
     },
   ],
-  links:[
+  links: [
     {
       heading: "Quick Links",
       links: [
